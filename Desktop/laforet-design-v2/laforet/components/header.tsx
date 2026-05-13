@@ -47,7 +47,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const handleLogoClick = () => {
     setIsMenuOpen(false)
-    window.scrollTo({ top: 0, behavior: "smooth" })
+    smoothScrollTo("top")
   }
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
