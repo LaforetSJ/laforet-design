@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { useRouter, usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -45,6 +46,17 @@ function smoothScrollTo(sectionId: string) {
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const router = useRouter()
+  const pathname = usePathname()
+
+  const handleLogoClick = () => {
+    setIsMenuOpen(false)
+    if (pathname === "/") {
+      smoothScrollTo("top")
+    } else {
+      router.push("/")
+    }
+  }
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
     e.preventDefault()
@@ -58,7 +70,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <button
-            onClick={() => { smoothScrollTo("top"); setIsMenuOpen(false) }}
+            onClick={handleLogoClick}
             className="flex items-center cursor-pointer"
             aria-label="페이지 상단으로 이동"
           >
