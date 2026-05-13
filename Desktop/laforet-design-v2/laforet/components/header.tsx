@@ -3,7 +3,6 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { useRouter, usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -46,16 +45,9 @@ function smoothScrollTo(sectionId: string) {
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const router = useRouter()
-  const pathname = usePathname()
-
   const handleLogoClick = () => {
     setIsMenuOpen(false)
-    if (pathname === "/") {
-      smoothScrollTo("top")
-    } else {
-      router.push("/")
-    }
+    window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
