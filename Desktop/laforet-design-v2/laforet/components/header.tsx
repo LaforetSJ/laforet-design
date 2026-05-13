@@ -14,11 +14,15 @@ const navItems = [
 ]
 
 function smoothScrollTo(sectionId: string) {
-  const element = document.getElementById(sectionId)
-  if (!element) return
+  const targetY = sectionId === "top"
+    ? 0
+    : (() => {
+        const element = document.getElementById(sectionId)
+        if (!element) return null
+        return element.getBoundingClientRect().top + window.scrollY - 80
+      })()
 
-  const headerHeight = 80
-  const targetY = element.getBoundingClientRect().top + window.scrollY - headerHeight
+  if (targetY === null) return
   const startY = window.scrollY
   const distance = targetY - startY
   const duration = 700
@@ -53,7 +57,11 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center cursor-pointer">
+          <button
+            onClick={() => { smoothScrollTo("top"); setIsMenuOpen(false) }}
+            className="flex items-center cursor-pointer"
+            aria-label="페이지 상단으로 이동"
+          >
             <Image
               src="/laforet-logo.jpg"
               alt="라포레디자인 로고"
@@ -62,7 +70,7 @@ export function Header() {
               className="h-16 w-auto object-contain"
               priority
             />
-          </Link>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
