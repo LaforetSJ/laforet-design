@@ -107,6 +107,7 @@ export default function RequestListPage() {
         <div className="mb-8">
           <h1 className="text-3xl font-semibold text-foreground mb-2">시공 접수</h1>
           <p className="text-muted-foreground text-sm">접수하신 내용은 비공개로 처리되며 담당자가 순차적으로 연락드립니다.</p>
+          <p className="text-muted-foreground text-sm">사이트 견적은 임시 견적으로, 최종 견적은 상담 후 확정됩니다.</p>
         </div>
 
         {/* 테이블 */}

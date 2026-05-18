@@ -5,7 +5,7 @@ import { Star, ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const BLOG_ID = "laforetdesign"
-const BLOG_URL = "https://blog.naver.com/laforetdesign"
+const BLOG_URL = "https://blog.naver.com/PostList.naver?blogId=laforetdesign&categoryNo=17&from=postList&parentCategoryNo=17"
 
 interface ReviewPost {
   title: string

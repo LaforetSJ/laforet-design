@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server"
 import { supabase } from "@/lib/supabase"
 
-export async function GET(request: Request, { params }: { params: { id: string } }) {
+export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { searchParams } = new URL(request.url)
   const password = searchParams.get("password") ?? ""
-  const id = Number(params.id)
+  const { id: idStr } = await params
+  const id = Number(idStr)
 
   if (isNaN(id) || id < 0) {
     return NextResponse.json({ success: false, error: "잘못된 접수번호입니다." }, { status: 400 })

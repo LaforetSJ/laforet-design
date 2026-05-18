@@ -29,7 +29,7 @@ export async function POST(request: Request) {
     const saved = rows[0]
 
     // 이메일 발송 (실패해도 접수는 성공 처리)
-    sendEmail(body, saved.id).catch((e) => console.error("Email error:", e))
+    sendEmail(body, saved.id, saved.created_at).catch((e) => console.error("Email error:", e))
 
     return NextResponse.json({ success: true, id: saved.id })
   } catch (error) {
@@ -38,7 +38,7 @@ export async function POST(request: Request) {
   }
 }
 
-async function sendEmail(data: any, id: number) {
+async function sendEmail(data: any, id: number, createdAt?: string) {
   if (!process.env.NAVER_PASSWORD || process.env.NAVER_PASSWORD === "여기에_네이버_비밀번호_입력") return
 
   const transporter = nodemailer.createTransport({
@@ -55,6 +55,10 @@ async function sendEmail(data: any, id: number) {
   const row = (label: string, value: any) =>
     `<tr><td style="padding:6px 10px;background:#f9f9f9;font-weight:bold;width:160px">${label}</td><td style="padding:6px 10px">${Array.isArray(value) ? (value.join(", ") || "-") : (value || "-")}</td></tr>`
 
+  const dateStr = createdAt
+    ? new Date(createdAt).toLocaleString("ko-KR", { timeZone: "Asia/Seoul" })
+    : new Date().toLocaleString("ko-KR", { timeZone: "Asia/Seoul" })
+
   // 관리자 알림 이메일
   await transporter.sendMail({
     from: `"라포레디자인 접수" <${process.env.NAVER_USER}>`,
@@ -62,6 +66,7 @@ async function sendEmail(data: any, id: number) {
     subject: `[라포레디자인] 새 시공 접수 #${id} - ${data.name}`,
     html: `
       <h2 style="color:#333">새 시공 접수 #${id}</h2>
+      <p style="color:#888;font-size:13px;margin:0 0 12px">접수일시: ${dateStr}</p>
       <table border="1" cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:100%;font-size:14px">
         <tr><td colspan="2" style="padding:8px 10px;background:#222;color:#fff;font-weight:bold">기본 정보</td></tr>
         ${row("이름", data.name)}

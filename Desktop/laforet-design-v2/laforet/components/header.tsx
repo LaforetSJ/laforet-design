@@ -94,6 +94,8 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/request"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm font-semibold text-primary border-2 border-primary rounded-lg px-5 py-2 hover:bg-primary/10 transition-colors"
             >
               시공 접수
@@ -132,6 +134,8 @@ export function Header() {
               ))}
               <Link
                 href="/request"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
                 className="text-sm font-semibold text-primary border-2 border-primary rounded-lg px-5 py-2.5 text-center hover:bg-primary/10 transition-colors"
               >
