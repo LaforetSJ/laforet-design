@@ -13,13 +13,13 @@ export function CTASection() {
           <br className="hidden sm:block" />
           24시간 내 빠른 답변을 드립니다.
         </p>
-        
-        <Button 
-          size="lg" 
+
+        <Button
+          size="lg"
           className="bg-foreground text-background hover:bg-foreground/90 rounded-lg px-8 py-6 text-base font-medium cursor-pointer"
           asChild
         >
-          <a href="https://pf.kakao.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://pf.kakao.com/_xmxnBTX" target="_blank" rel="noopener noreferrer">
             <MessageCircle className="mr-2 w-5 h-5" />
             카카오톡으로 문의하기
           </a>
