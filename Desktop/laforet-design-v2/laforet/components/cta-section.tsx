@@ -19,7 +19,7 @@ export function CTASection() {
           className="bg-foreground text-background hover:bg-foreground/90 rounded-lg px-8 py-6 text-base font-medium cursor-pointer"
           asChild
         >
-          <a href="https://pf.kakao.com/_xmxnBTX" target="_blank" rel="noopener noreferrer">
+          <a href="https://pf.kakao.com/_EkwbX" target="_blank" rel="noopener noreferrer">
             <MessageCircle className="mr-2 w-5 h-5" />
             카카오톡으로 문의하기
           </a>
