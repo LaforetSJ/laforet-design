@@ -29,7 +29,7 @@ export async function POST(request: Request) {
     const saved = rows[0]
 
     // 이메일 발송 (실패해도 접수는 성공 처리)
-    sendEmail(body, saved.id, saved.created_at).catch((e) => console.error("Email error:", e))
+    await sendEmail(body, saved.id, saved.created_at).catch((e) => console.error("Email error:", e))
 
     return NextResponse.json({ success: true, id: saved.id })
   } catch (error) {
