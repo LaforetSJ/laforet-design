@@ -35,8 +35,8 @@ export function ContactSection() {
                 <div className="flex gap-4">
                   <dt className="w-24 shrink-0 text-sm font-semibold text-primary uppercase tracking-wide">Open</dt>
                   <dd className="text-foreground text-sm space-y-1">
-                    <p>MON – FRI &nbsp; AM 09:00 ~ PM 06:00</p>
-                    <p>SAT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AM 09:00 ~ PM 06:00</p>
+                    <p>MON – FRI &nbsp; AM 08:30 ~ PM 07:00</p>
+                    <p>SAT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AM 10:00 ~ PM 06:00</p>
                   </dd>
                 </div>
                 <div className="flex gap-4">
