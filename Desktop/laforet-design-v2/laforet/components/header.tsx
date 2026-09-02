@@ -93,7 +93,7 @@ export function Header() {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
-              href="/request"
+              href="https://blog.naver.com/laforetdesign/223977204224"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-semibold text-primary border-2 border-primary rounded-lg px-5 py-2 hover:bg-primary/10 transition-colors"
@@ -133,7 +133,7 @@ export function Header() {
                 </a>
               ))}
               <Link
-                href="/request"
+                href="https://blog.naver.com/laforetdesign/223977204224"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}

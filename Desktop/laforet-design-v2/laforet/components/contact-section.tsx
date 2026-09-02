@@ -48,7 +48,7 @@ export function ContactSection() {
 
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <a
-                href="/request"
+                href="https://blog.naver.com/laforetdesign/223977204224"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 text-center bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg px-6 py-3 text-sm font-semibold transition-colors"
