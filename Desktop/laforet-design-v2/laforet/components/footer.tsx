@@ -29,7 +29,7 @@ export function Footer() {
             <h4 className="font-semibold text-background mb-4">회사 정보</h4>
             <ul className="space-y-2 text-sm text-background/70">
               <li>상호: 라포레디자인</li>
-              <li>대표: 김정환</li>
+              <li>대표: 이문희</li>
               <li>주소: 경기도 용인시 수지구<br />수풍로 53 상가동 1층<br />(동문굿모닝힐)</li>
             </ul>
           </div>
