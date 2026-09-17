@@ -186,7 +186,7 @@ export default function RequestPage() {
           <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-6" />
           <h2 className="text-2xl font-semibold text-foreground mb-3">접수가 완료되었습니다!</h2>
           <p className="text-muted-foreground mb-2">담당자가 확인 후 빠른 시간 내에 연락드리겠습니다.</p>
-          <p className="text-sm text-muted-foreground mb-8">📱 010-8587-9987</p>
+          <p className="text-sm text-muted-foreground mb-8">📱 010-4901-0314</p>
           <Button onClick={() => router.push("/")} className="bg-primary text-primary-foreground px-8">홈으로 돌아가기</Button>
         </div>
       </div>

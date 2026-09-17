@@ -29,7 +29,7 @@ export function ContactSection() {
                 <div className="flex gap-4">
                   <dt className="w-24 shrink-0 text-sm font-semibold text-primary uppercase tracking-wide">Tel</dt>
                   <dd className="text-foreground text-sm space-y-1">
-                    <a href="tel:010-8587-9987" className="block hover:text-primary transition-colors">📱 010-8587-9987</a>
+                    <a href="tel:010-4901-0314" className="block hover:text-primary transition-colors">📱 010-4901-0314</a>
                   </dd>
                 </div>
                 <div className="flex gap-4">
@@ -56,7 +56,7 @@ export function ContactSection() {
                 시공 접수하기
               </a>
               <a
-                href="tel:010-8587-9987"
+                href="tel:010-4901-0314"
                 className="flex-1 text-center border-2 border-primary text-foreground hover:bg-primary/10 rounded-lg px-6 py-3 text-sm font-semibold transition-colors"
               >
                 전화 문의

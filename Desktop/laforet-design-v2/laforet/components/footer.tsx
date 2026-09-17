@@ -39,8 +39,8 @@ export function Footer() {
             <h4 className="font-semibold text-background mb-4">연락처</h4>
             <ul className="space-y-2 text-sm text-background/70">
               <li>
-                <a href="tel:010-8587-9987" className="hover:text-primary transition-colors cursor-pointer">
-                  📱 010-8587-9987
+                <a href="tel:010-4901-0314" className="hover:text-primary transition-colors cursor-pointer">
+                  📱 010-4901-0314
                 </a>
               </li>
               <li className="text-background/50">FAX: 070-8280-7077</li>

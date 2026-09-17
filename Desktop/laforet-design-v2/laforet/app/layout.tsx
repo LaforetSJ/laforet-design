@@ -87,7 +87,7 @@ export default function RootLayout({
               name: "라포레디자인",
               alternateName: "La Forêt Design",
               url: "https://laforetdesign.vercel.app",
-              telephone: ["010-8587-9987"],
+              telephone: ["010-4901-0314"],
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "수풍로 53 상가동 1층",

@@ -117,7 +117,7 @@ async function sendEmail(data: any, id: number, createdAt?: string) {
         <p>담당자가 확인 후 <b>${data.phone}</b>으로 연락드리겠습니다.</p>
         <br/>
         <p>감사합니다.</p>
-        <p><b>라포레디자인</b><br/>📱 010-8587-9987</p>
+        <p><b>라포레디자인</b><br/>📱 010-4901-0314</p>
       `,
     })
   }
